@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Titre Principal -->
+    <title>Momow AWPer Professionnel CS - Free Agent</title>
+
+    <!-- Description SEO -->
+    <meta
+        name="description"
+        content="Momow - AWPer professionnel français. Rating 2.0 1.25, ex-3DMAX, Vitality Academy. Free Agent disponible pour essais et opportunités."
+    />
+    <meta
+        name="keywords"
+        content="Momow, AWPer, CS2, Counter-Strike, Esport, Pro Player, Free Agent, 3DMAX, Vitality Academy, Highlights, Setup, Portfolio"
+    />
+    <meta name="author" content="Momow" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="image.png" type="image/png" />
+    <link rel="shortcut icon" href="image.png" type="image/png" />
+    <link rel="apple-touch-icon" href="image.png" />
+
+    <!-- METADONNÉES DISCORD LARGE EMBED -->
+    <meta property="og:site_name" content="Momow AWPer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="welcome to my website" />
+    <meta
+        property="og:description"
+        content="Découvrez mon parcours, mes statistiques, mes highlights et mes performances en compétition"
+    />
+    <meta property="og:image" content="https://momow.fr/momow-preview.gif" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="welcome to my website" />
+    <meta property="og:url" content="https://momow.fr" />
+    <meta property="og:video:width" content="1200" />
+    <meta property="og:video:height" content="630" />
+    <meta
+        property="og:video:secure_url"
+        content="https://momow.fr/momow-preview.gif"
+    />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@momow" />
+    <meta name="twitter:creator" content="@momow" />
+    <meta name="twitter:title" content="welcome to my website" />
+    <meta
+        name="twitter:description"
+        content="Découvrez mon parcours, mes statistiques, mes highlights et mes performances en compétition"
+    />
+    <meta name="twitter:image" content="https://momow.fr/momow-preview.gif" />
+    <meta name="twitter:image:alt" content="welcome to my website" />
+    <meta name="twitter:player" content="https://momow.fr/momow-preview.gif" />
+    <meta name="twitter:player:width" content="1200" />
+    <meta name="twitter:player:height" content="630" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://momow.fr" />
+
+    <!-- Thème couleur -->
+    <meta name="theme-color" content="#0066ff" />
+
+    <!-- Compatibilité Microsoft -->
+    <meta name="msapplication-TileColor" content="#ff4500" />
+    <meta name="msapplication-TileImage" content="image.png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet"
+    />
+</head>
+<body>
+    <!-- Écran d'accueil avec bouton -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="image.png" alt="Momow Logo" class="custom-logo" />
+                <span class="loading-text">MOMOW</span>
+            </div>
+            <div class="enter-text">
+                <h2>AWPer Professionnel CS</h2>
+                <p>Clique pour entrer dans l'univers Momow</p>
+            </div>
+            <button class="enter-btn" id="enterBtn">
+                <i class="fas fa-play"></i>
+                <span>ENTRER DANS LE SITE</span>
+            </button>
+            <div class="enter-tip">
+                <i class="fas fa-volume-up"></i>
+                Musique automatique
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="backgroundMusic" loop>
+        <source src="ssstik.io_1766530994460.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="audio-control-icon">
+        <i id="volume-icon" class="fas fa-volume-mute" title="Activer le son"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="image.png" alt="Momow Logo" class="logo-img" />
+                <span class="logo-text">MOMOW</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-text">Accueil</span>
+                </a>
+                <a href="#highlights" class="nav-link">
+                    <i class="fas fa-video"></i>
+                    <span class="nav-text">Highlights</span>
+                </a>
+                <a href="#stats" class="nav-link">
+                    <i class="fas fa-chart-bar"></i>
+                    <span class="nav-text">Stats</span>
+                </a>
+                <a href="#setup" class="nav-link">
+                    <i class="fas fa-desktop"></i>
+                    <span class="nav-text">Setup</span>
+                </a>
+                <a href="mailto:contact.momow@pro.com" class="login-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </div>
+            <!-- Bouton menu mobile -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Momow <br />
+                        <span>AWPer Pro</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        AWPers agressif, Décisions rapides et Exécutions sans hésitation.
+                        <br />
+                        Free Agent opérationnel dès le pistol round.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">1.25</div>
+                            <div class="stat-label">Rating 2.0</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">82</div>
+                            <div class="stat-label">ADR Moyenne</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">3DMAX</div>
+                            <div class="stat-label">Ancienne équipe</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <button class="cta-btn" id="exploreBtn">
+                            <i class="fas fa-bolt"></i>
+                            Voir mes Faits Marquants
+                        </button>
+                        <a
+                            href="https://guns.lol/momow"
+                            target="_blank"
+                            class="cta-btn secondary-cta-btn"
+                        >
+                            <i class="fas fa-link"></i>
+                            <span class="nav-text">Tous mes liens</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Carte vidéo de présentation à la place du screen stat simple -->
+                <div class="hero-visual">
+                    <div class="image-wrapper hero-intro-card" id="heroIntroCard">
+                        <img
+                            src="stat.png"
+                            alt="Momow - Statistiques"
+                            class="hero-image"
+                        />
+                        <div class="image-overlay">
+                            <div class="overlay-text">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Vidéo de présentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section class="highlights" id="highlights">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-fire"></i>
+                    Highlights Signature Clips
+                </h2>
+                <p class="section-subtitle">
+                    CS2, Valorant &amp; Rainbow Six – clique sur une carte pour voir le clip.
+                </p>
+                <div class="products-grid" id="projectsGrid">
+                    <!-- Généré par JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="about" id="stats">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-trophy"></i>
+                    Statistiques &amp; Expérience
+                </h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            Formé sur les scènes high-level françaises, renforcé par
+                            l'expérience internationale. Style agressif contrôlé, lecture
+                            instantanée.
+                        </p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature glass">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h4>AWP Main Agressif</h4>
+                            <p>Impact immédiat sur chaque round.</p>
+                        </div>
+                        <div class="feature glass">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Rating 2.0 1.25</h4>
+                            <p>Performance constante en compétition.</p>
+                        </div>
+                        <div class="feature glass">
+                            <div class="feature-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4>Expérience Pro</h4>
+                            <p>3DMAX, Vitality Academy, Top Mixs FR.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Setup Section -->
+        <section class="setup" id="setup">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    Setup &amp; Configuration
+                </h2>
+
+                <!-- Les deux photos côte à côte -->
+                <div class="setup-visuals">
+                    <div class="setup-image-item">
+                        <img
+                            src="setup1.jpg"
+                            alt="Setup de Momow - Vue Principale"
+                            class="setup-image-content clickable-image"
+                        />
+                    </div>
+                    <div class="setup-image-item">
+                        <img
+                            src="setup2.jpg"
+                            alt="Setup de Momow - Vue Latérale"
+                            class="setup-image-content clickable-image"
+                        />
+                    </div>
+                </div>
+
+                <!-- Lien PCPartPicker -->
+                <a
+                    href="https://de.pcpartpicker.com/list/Fn8hv4"
+                    target="_blank"
+                    class="setup-link-pcp"
+                >
+                    Voir la liste complète sur PCPartPicker
+                </a>
+
+                <div class="setup-description">
+                    <p>
+                        La performance exige un équipement sans compromis. Voici la
+                        configuration utilisée pour l'entraînement et les compétitions.
+                    </p>
+                </div>
+
+                <!-- Liste COMPLÈTE du setup -->
+                <div class="setup-specs-full">
+                    <div class="specs-category">
+                        <h3>
+                            <i class="fas fa-microchip"></i>
+                            Configuration PC
+                        </h3>
+                        <p class="category-subtitle">Setup Pro Gamer / Creator</p>
+                        <ul class="specs-list">
+                            <li>
+                                <a
+                                    href="https://www.ldlc.com/fiche/PB00387534.html"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-microchip"></i>
+                                    Processeur AMD Ryzen 7 5800X
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.amazon.fr/Corsair-Watercooling-Processeur-Performances-Ventilateurs/dp/B08Q7L3N4W?th=1"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-snowflake"></i>
+                                    Refroidissement Corsair iCUE H100i ELITE CAPELLIX
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://estore.asus.com/fr-fr/rog-90mb19v0-m0eay0-rog-strix-b550-f-gaming-wifi-ii.html"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-server"></i>
+                                    Carte Mère Asus ROG STRIX B550-F Gaming WiFi II
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.corsair.com/fr/fr/p/memory/cmh32gx4m2d3600c18w/vengeance-rgb-pro-sl-32gb-2-x-16gb-ddr4-dram-3600mhz-c18-memory-kit-cmh32gx4m2d3600c18w"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-memory"></i>
+                                    RAM Corsair Vengeance RGB Pro SL 32 Go DDR4 3600 MHz
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.amazon.com/WD-Black-SN850-Internal-Gaming-Heatsink/dp/B08PHSVW7K"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-hdd"></i>
+                                    Stockage WD Black SN850 1 To NVMe PCIe 4.0
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.amazon.fr/MSI-GeForce-Graphique-DisplayPort-r%C3%A9solution/dp/B08LTJVGYS"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-video"></i>
+                                    Carte Graphique MSI GeForce RTX 3090 SUPRIM X 24 Go
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.amazon.fr/Corsair-Alimentation-Enti%C3%A8rement-Modulaire-Silencieuse/dp/B0BVL17341?th=1"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-plug"></i>
+                                    Alimentation Corsair RM850e 850 W, 80+ Gold
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="specs-category">
+                        <h3>
+                            <i class="fas fa-gamepad"></i>
+                            Périphériques &amp; Audio
+                        </h3>
+                        <p class="category-subtitle">Équipement de compétition</p>
+                        <ul class="specs-list">
+                            <li>
+                                <a
+                                    href="https://www.pccomponentes.fr/benq-zowie-xl2566k-245-led-fullhd-360hz-dyac"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-desktop"></i>
+                                    Écran Principal Zowie XL2566K 360 Hz
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.amazon.fr/MSI-G274QPX-%C3%89cran-Plat-Pixels/dp/B0CH5476VK?th=1"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-desktop"></i>
+                                    Écran Secondaire MSI G274QPX 240 Hz
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://clickclack.io/products/tkd-pt1-75-mechanical-keyboard-kit"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-keyboard"></i>
+                                    Clavier TKD PT.1 75 – Switches Vertex V1
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.wlmouse.com/en-wl/products/beast-max"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-mouse"></i>
+                                    Souris Beast X Max 8K Silver
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.amazon.fr/beyerdynamic-Technologie-lenregistrement-Surveillance-Professionnels/dp/B0DGLV6QVX"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-headphones"></i>
+                                    Casque Beyerdynamic DT 1770 Pro MK2
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.amazon.fr/Rode-Microphones-PODMIC-Podcast-Microphone/dp/B07MSCRCVK?th=1"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-microphone"></i>
+                                    Microphone Rode PodMic
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.amazon.fr/RDECaster-Duo-RDE-production-podcasting/dp/B0BQLJYSBX?th=1"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-sliders-h"></i>
+                                    Interface Audio RodeCaster Duo
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://direct.playstation.com/fr-fr/buy-consoles/playstation5-console-1-tb"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-gamepad"></i>
+                                    Console PlayStation 5 Slim
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="image.png" alt="Momow Logo" class="logo-img" />
+                    <h3>Momow <span>Pro</span></h3>
+                </div>
+                <p>AWPer Free Agent disponible pour essais et opportunités.</p>
+                <div class="social-links">
+                    <a href="https://guns.lol/momow" target="_blank" class="social-btn">
+                        <i class="fas fa-link"></i>
+                    </a>
+                    <a href="mailto:contact.momow@pro.com" class="social-btn">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Équipes</h3>
+                <ul class="footer-links">
+                    <li><a href="#">3DMAX</a></li>
+                    <li><a href="#">Vitality Academy</a></li>
+                    <li><a href="#">Mixs FR High-Level</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <a
+                        href="mailto:contact.momow@pro.com"
+                        class="footer-email"
+                    >
+                        contact.momow@pro.com
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-globe"></i>
+                    <span>Disponible International</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Momow. Portfolio Esport.</p>
+        </div>
+    </footer>
+
+    <!-- Modales clips -->
+    <div id="projectModal" class="modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <span id="closeProject" class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body" id="modalDetails">
+                <!-- Contenu généré par JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale image (setup / hero) -->
+    <div id="imageModal" class="modal">
+        <div class="modal-container image-modal">
+            <span id="closeImage" class="close-btn">&times;</span>
+            <img id="modalImage" src="" alt="Image agrandie" />
+        </div>
+    </div>
+
+    <!-- Modale vidéo de présentation -->
+    <div id="introModal" class="modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Présentation de Momow</h2>
+                <span id="closeIntro" class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <video controls class="modal-video" id="introVideo">
+                        <source src="intro_momow.mp4" type="video/mp4" />
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
+                <div class="modal-description">
+                    <h3>À propos</h3>
+                    <p>
+                        Je me présente, mon parcours sur CS2, Valorant et Rainbow Six, mon rôle d’AWPer
+                        et ce que je recherche comme projet esport.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
