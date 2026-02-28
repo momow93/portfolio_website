@@ -1,0 +1,302 @@
+:root{
+  --rd-blue:#0b2a4a;
+  --rd-blue-2:#0f3b66;
+  --rd-gray:#eef2f6;
+  --rd-dark:#0b1220;
+  --rd-text:#1b2b3a;
+  --rd-border:rgba(15,59,102,.12);
+  --rd-shadow:0 12px 30px rgba(2,8,23,.08);
+  --rd-shadow-2:0 18px 44px rgba(2,8,23,.14);
+  --rd-radius:22px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  height:100%;
+}
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:#fff;
+  color:var(--rd-text);
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+a:hover{
+  color:var(--rd-blue-2);
+}
+
+/* NAVBAR */
+
+.bg-rd-blue{
+  background:linear-gradient(90deg,var(--rd-blue),#081b31);
+}
+
+.navbar{
+  transition:all .25s ease;
+}
+
+.navbar.navbar-scrolled{
+  background:rgba(11,42,74,.95)!important;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+.brand-badge{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.brand-badge img{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  border-radius:14px;
+}
+
+.brand-badge .name{
+  font-weight:800;
+}
+
+.brand-badge .small{
+  font-size:12px;
+  opacity:.85;
+}
+
+/* BOUTON PRINCIPAL */
+
+.btn-rd{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  border:0;
+  color:#fff;
+  background:linear-gradient(135deg,#13a0ff,var(--rd-blue-2));
+  padding:12px 18px;
+  border-radius:16px;
+  font-weight:700;
+  transition:.2s ease;
+}
+
+.btn-rd:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(19,160,255,.3);
+}
+
+/* HERO */
+
+.hero{
+  padding-top:100px;
+  padding-bottom:80px;
+  background:linear-gradient(180deg,#071629,#0b2a4a);
+  color:#fff;
+}
+
+.hero .lead{
+  opacity:.9;
+}
+
+/* SECTION */
+
+.bg-soft{
+  background:var(--rd-gray);
+}
+
+.section-kicker{
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:.15em;
+  font-weight:700;
+}
+
+.section-title{
+  font-weight:800;
+}
+
+/* CARD */
+
+.feature{
+  background:#fff;
+  border:1px solid var(--rd-border);
+  border-radius:var(--rd-radius);
+  padding:20px;
+  box-shadow:var(--rd-shadow);
+  transition:.2s ease;
+}
+
+.feature:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--rd-shadow-2);
+}
+
+/* IMPORTANT : on ne force PAS les couleurs internes */
+/* (ça évite de casser boutons et liens) */
+
+.icon-pill{
+  width:46px;
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  background:rgba(19,160,255,.12);
+  color:var(--rd-blue-2);
+}
+
+/* IMAGES */
+
+.img-hover{
+  overflow:hidden;
+  border-radius:var(--rd-radius);
+  border:1px solid var(--rd-border);
+  background:#fff;
+}
+
+.img-hover img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  transition:.3s ease;
+}
+
+.img-hover:hover img{
+  transform:scale(1.05);
+}
+
+.img-caption{
+  padding:12px;
+  font-weight:700;
+  border-top:1px solid var(--rd-border);
+}
+
+/* MAP */
+
+.map-embed{
+  border-radius:var(--rd-radius);
+  overflow:hidden;
+  border:1px solid var(--rd-border);
+  box-shadow:var(--rd-shadow);
+}
+
+.map-embed iframe{
+  width:100%;
+  height:360px;
+  border:0;
+  display:block;
+}
+
+/* FORM */
+
+.form-control,
+.form-select{
+  border-radius:16px;
+  border:1px solid var(--rd-border);
+  padding:12px;
+}
+
+.form-control:focus,
+.form-select:focus{
+  box-shadow:0 0 0 .25rem rgba(19,160,255,.15);
+  border-color:rgba(19,160,255,.4);
+}
+
+/* FOOTER */
+
+.footer{
+  background:#061221;
+  color:#fff;
+}
+
+.footer a{
+  color:#fff;
+  opacity:.85;
+}
+
+.footer a:hover{
+  opacity:1;
+}
+
+/* BACK TO TOP */
+
+#toTop{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:#111827;
+  color:#fff;
+  border:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition:.2s ease;
+}
+
+#toTop.show{
+  opacity:1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+  .img-hover img{
+    height:300px;
+  }
+}
+/* ===== Fix tailles logo + carte de visite ===== */
+
+/* bloc logo en bas à gauche (footer / etc) */
+.footer-logo img{
+  width:56px;
+  height:56px;
+  object-fit:contain;
+}
+
+/* logo si tu l'affiches ailleurs */
+.logo-rd{
+  width:54px;
+  height:54px;
+  object-fit:contain;
+}
+
+/* carte de visite (évite qu'elle prenne tout l'écran) */
+.business-card-img{
+  width:100%;
+  max-width:720px;   /* <-- ajuste si tu veux plus petit (ex: 620px) */
+  height:auto;
+  display:block;
+  margin:0 auto;
+  border-radius:18px;
+}
+
+/* sur mobile on réduit encore */
+@media (max-width: 576px){
+  .business-card-img{
+    max-width:100%;
+  }
+}
+/* ===== FIX DEFINITIF CARDS HERO ===== */
+
+.hero .feature{
+  background:#ffffff;
+  color:#1b2b3a;   /* force texte sombre */
+}
+
+.hero .feature .fw-bold{
+  color:#0b2a4a;   /* titre foncé */
+}
+
+.hero .feature .text-muted{
+  color:#6c757d !important;  /* sous-texte gris */
+}

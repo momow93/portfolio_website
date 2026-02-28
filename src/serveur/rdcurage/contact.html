@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact / Devis | RDCurage — Intervention 24/7</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="icon" href="assets/icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="assets/icons/site.webmanifest">
+</head>
+
+<body>
+
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+  <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="polite" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        ✅ Message bien envoyé. On revient vers vous rapidement.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Fermer"></button>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-rd-blue fixed-top">
+  <div class="container">
+    <a class="navbar-brand brand-badge" href="index.html">
+      <img src="assets/img/logo-rdcurage.png" alt="Logo RDCurage">
+      <div>
+        <div class="name">RDCurage</div>
+        <div class="small">Urgence 24/7 • Île-de-France</div>
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="realisations.html">Interventions</a></li>
+        <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn-rd" href="contact.html"><i class="fa-solid fa-file-signature"></i> Devis / Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero pt-5">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-8" data-aos="fade-up">
+        <div class="section-kicker text-white">Devis</div>
+        <h1 class="display-5 fw-bold">Contact / Demande de devis</h1>
+        <p class="lead opacity-90 mb-0">Réponse rapide • Intervention 24h/24 7j/7</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="py-5 bg-soft">
+  <div class="container">
+
+    <!-- ✅ IMPORTANT : plus de align-items-stretch -->
+    <div class="row g-4">
+
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="feature p-4 p-lg-5 h-100">
+          <h2 class="section-title mb-2">Envoyer une demande</h2>
+          <p class="text-muted mb-4">Le message est envoyé directement à <strong>Rdcurage@gmail.com</strong>.</p>
+
+          <form id="contactForm"
+                action="https://formsubmit.co/rdcurage@gmail.com"
+                method="POST"
+                autocomplete="on">
+
+            <input type="hidden" name="_subject" value="Demande de devis — RDCurage">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://rdcurage.fr/contact.html?sent=1">
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Nom</label>
+                <input class="form-control" name="Nom" placeholder="Votre nom" required autocomplete="name">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Téléphone</label>
+                <input class="form-control" name="Téléphone" placeholder="06..." required autocomplete="tel">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Email</label>
+                <input type="email" class="form-control" name="Email" placeholder="exemple@mail.com" autocomplete="email">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Ville</label>
+                <input class="form-control" name="Ville" placeholder="Paris, Vélizy, ..." autocomplete="address-level2">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-bold">Service</label>
+                <select class="form-select" name="Service" required>
+                  <option value="" selected disabled>Choisir…</option>
+                  <option>Débouchage</option>
+                  <option>Hydrocurage</option>
+                  <option>Curage</option>
+                  <option>Passage caméra</option>
+                  <option>Assainissement</option>
+                  <option>Pompage</option>
+                  <option>Fosse septique</option>
+                  <option>Urgence 24/7</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-bold">Message</label>
+                <textarea class="form-control" rows="5" name="Message" placeholder="Décris le problème, l’adresse et l’urgence" required></textarea>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-4 align-items-center">
+              <button id="sendBtn" class="btn-rd" type="submit">
+                <i class="fa-solid fa-paper-plane me-2"></i>Envoyer
+              </button>
+
+              <a class="btn btn-dark fw-bold px-4 rounded-rd" href="tel:+33658011983">
+                <i class="fa-solid fa-phone me-2"></i>06 58 01 19 83
+              </a>
+
+              <span id="sendHint" class="small text-muted ms-1"></span>
+            </div>
+
+            <div class="small text-muted mt-3">
+              Horaires : 24h/24 7j/7 • Zone : Île-de-France
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="feature p-4 p-lg-5 mb-3">
+          <h4 class="fw-bold mb-3">Coordonnées</h4>
+
+          <div class="border-soft rounded-rd p-3 bg-white mb-3">
+            <div class="small text-muted">Téléphone</div>
+            <div class="fw-bold"><a href="tel:+33658011983">06 58 01 19 83</a></div>
+          </div>
+
+          <div class="border-soft rounded-rd p-3 bg-white mb-3">
+            <div class="small text-muted">Email</div>
+            <div class="fw-bold"><a href="mailto:Rdcurage@gmail.com">Rdcurage@gmail.com</a></div>
+          </div>
+
+          <div class="border-soft rounded-rd p-3 bg-white">
+            <div class="small text-muted">Adresse</div>
+            <div class="fw-bold">82 rue de la Garenne, Le Plessis-Robinson</div>
+            <div class="small text-muted mt-2">Zone : Île-de-France • Paris</div>
+          </div>
+        </div>
+
+        <div class="map-embed">
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=82%20rue%20de%20la%20garenne%20le%20plessis%20robinson&output=embed"></iframe>
+        </div>
+        <div class="small text-muted mt-2">Clique sur la map pour l’itinéraire</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-6">
+        <div class="footer-logo">
+          <img src="assets/img/logo-rdcurage.png" alt="Logo RDCurage">
+          <div>
+            <div class="fw-bold">RDCurage</div>
+            <div class="small opacity-75">Urgence 24h/24 7j/7 • Île-de-France</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 text-md-end small opacity-75">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <span class="mx-2">•</span>
+        <a href="contact.html">Contact</a>
+        <div class="mt-2">© <span id="year"></span> RDCurage — Tous droits réservés</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  const f = document.getElementById('contactForm');
+  const b = document.getElementById('sendBtn');
+  const h = document.getElementById('sendHint');
+  if (f && b && h) {
+    f.addEventListener('submit', () => {
+      b.style.opacity = .85;
+      b.style.pointerEvents = 'none';
+      h.textContent = 'Envoi en cours…';
+    });
+  }
+</script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
